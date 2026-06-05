@@ -1,0 +1,435 @@
+/* ============================================================
+   MERGED CSS: Global + App + Order Card + Header/Menu
+   ============================================================ */
+
+/* ===== Font Import ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* ===== Global Styles ===== */
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ===== Gradients ===== */
+.gradient-bg,
+.gradient-header,
+.banner-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+/* ===== Sidebar ===== */
+.sidebar {
+    position: fixed;
+    top: 4rem; /* Trừ phần header cao 4rem (64px) */
+    left: 0;
+    width: 16rem; /* 64 = 16rem */
+    height: calc(100% - 4rem);
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%); /* Gradient xanh tím */
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    transition: transform 0.3s ease-in-out;
+    color: #e0e0e0;
+}
+
+/* Menu item cơ bản */
+.sidebar .menu-item {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    transition: all 0.3s ease;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+/* Hover */
+.sidebar .menu-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
+}
+
+/* Active */
+.sidebar .menu-item.active {
+    background: rgba(255, 255, 255, 0.25);
+    border-right: 4px solid #ffffff;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Divider giữa các nhóm menu */
+.sidebar .menu-divider {
+    height: 2px;
+    margin: 0.5rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Header gradient giữ trắng */
+.gradient-header {
+    background-color: white;
+}
+
+/* ===== Dropdown Menu ===== */
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: 0.5rem;
+    width: 12rem;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    z-index: 50;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Dropdown Links ===== */
+#userDropdown a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #374151;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+#userDropdown a:hover {
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+/* ===== Logout Link ===== */
+#userDropdown a.logout {
+    color: #dc2626;
+}
+
+#userDropdown a.logout:hover {
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+/* ===== Dropdown Arrow Animation ===== */
+#dropdownArrow {
+    transition: transform 0.2s ease;
+}
+/* ===== Logout Button (for <button> tag) ===== */
+button.logout {
+    color: #dc2626;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+button.logout:hover {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #b91c1c;
+}
+
+
+
+/* ===== Cards ===== */
+.order-card,
+.register-card,
+.login-card,
+.reset-card,
+.promotion-card,
+.product-card,
+.review-card,
+.card-hover,
+.stats-card,
+.stats-card-2,
+.stats-card-3,
+.stats-card-4,
+.stat-card,
+.stat-card-2,
+.stat-card-3,
+.stat-card-4 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.95);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.register-card,
+.login-card,
+.reset-card { backdrop-filter: blur(10px); }
+
+.order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card-hover:hover,
+.product-card:hover,
+.review-card:hover,
+.promotion-card:hover,
+.stats-card:hover,
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.promotion-card:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+/* ===== Product Cards & Category Icons ===== */
+.category-icon { transition: transform 0.3s ease; }
+.category-icon:hover { transform: scale(1.1); }
+
+/* ===== Tabs ===== */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.tab-button.active { background-color: #3b82f6; color: #fff; }
+
+/* ===== Star Rating & Reviews ===== */
+.star-rating {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    user-select: none;
+}
+
+.star {
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    color: #d1d5db;                    /* màu sao chưa chọn */
+    transition: transform .1s ease, color .2s ease, text-shadow .2s ease;
+    will-change: transform, color;
+    display: inline-block;      /* thêm */
+    padding: 2px;  
+}
+
+.star.hover,
+.star.active {
+    color: #fbbf24;                    /* vàng sáng */
+    text-shadow: 0 0 8px rgba(251, 191, 36, 0.35);
+}
+
+.star:active {
+    transform: scale(0.95);
+}
+
+/* Trạng thái chỉ đọc (dùng khi hiển thị sao trung bình) */
+.star-rating.readonly .star {
+    cursor: default;
+}
+
+/* Vô hiệu hoá chọn sao (khi đang submit, v.v.) */
+.star.is-disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Giảm chuyển động nếu người dùng bật reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .star {
+        transition: color .2s ease;
+    }
+    .star:active {
+        transform: none;
+    }
+}
+
+/* Card review và progress giữ nguyên hiệu ứng hover */
+.review-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.progress-bar { transition: width 0.3s ease; }
+
+/* ===== Inputs & Forms ===== */
+.input-field,
+.form-input {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.input-field:focus,
+.form-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 8px 25px rgba(102,126,234,0.15);
+    transform: translateY(-2px);
+}
+
+/* ===== Buttons ===== */
+.btn-primary, .login-btn, .register-btn, .reset-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: all 0.3s ease;
+    color: white;
+}
+.btn-primary:hover, .login-btn:hover, .register-btn:hover, .reset-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102,126,234,0.3);
+}
+
+/* ===== Floating Shapes ===== */
+.floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+.floating-shape:nth-child(1) { width: 80px; height: 80px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); top:5%; left:10%; animation-delay:0s; }
+.floating-shape:nth-child(2) { width: 120px; height: 120px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); top:15%; right:15%; animation-delay:2s; }
+.floating-shape:nth-child(3) { width: 60px; height: 60px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); bottom:25%; left:20%; animation-delay:4s; }
+.floating-shape:nth-child(4) { width: 100px; height: 100px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); bottom:15%; right:10%; animation-delay:1s; }
+.floating-shape:nth-child(5) { width: 70px; height: 70px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); top:50%; left:5%; animation-delay:3s; }
+
+/* ===== Animations ===== */
+@keyframes float { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(180deg); } }
+@keyframes fadeIn { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.8s ease-out forwards; }
+.fade-in { animation: fadeIn 0.3s ease-in; }
+.fade-in-lg { animation: fadeIn 0.5s ease-in; }
+
+@keyframes slideIn { from { transform: translateX(100%); opacity:0; } to { transform:translateX(0); opacity:1; } }
+.message-animation { animation: slideIn 0.3s ease-out; }
+.notification { animation: slideIn 0.3s ease; }
+
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.loading { animation: spin 1s linear infinite; }
+
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.5; } }
+.status-badge, .notification-badge, .online-indicator { animation: pulse 2s infinite; }
+.pulse-warning { animation: pulseWarning 2s infinite; }
+@keyframes pulseWarning { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+@keyframes flashPulse { 0%,100% { opacity:1; } 50% { opacity:0.7; } }
+.flash-sale { animation: flashPulse 2s infinite; }
+
+@keyframes chatSlide { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+.chat-bubble { animation: chatSlide 0.3s ease-out; }
+
+@keyframes typingPulse { 0%,100% { opacity:0.4; } 50% { opacity:1; } }
+.typing-indicator { animation: typingPulse 1.5s infinite; }
+
+/* ===== Modal ===== */
+.modal-overlay {
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity 0.3s ease-in-out;
+    opacity:0;
+    pointer-events:none;
+}
+.modal-overlay.open { opacity:1; pointer-events:auto; }
+.modal-content {
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity:0;
+}
+.modal-overlay.open .modal-content { transform: translateY(0); opacity:1; }
+.modal-backdrop { backdrop-filter: blur(4px); }
+
+/* ===== Step Indicators ===== */
+.step-indicator { transition: all 0.3s ease; }
+.step-indicator.active { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color:white; }
+.step-indicator.completed { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color:white; }
+
+/* ===== Countdown ===== */
+.countdown { color:#667eea; font-weight:600; }
+.countdown-gradient { background: linear-gradient(45deg,#ff6b6b,#ee5a24); color:#fff; }
+
+/* ===== Sidebar / Menu ===== */
+.sidebar-item, .nav-item, .menu-item { transition: all 0.3s ease; position:relative; }
+.sidebar-item:hover, .sidebar-item.active, .nav-item:hover { 
+    color:white; 
+    background: linear-gradient(135deg,#667eea 0%,#764ba2 100%); 
+    transform:translateX(5px); 
+    box-shadow:2px 2px 10px rgba(0,0,0,0.1); 
+}
+.nav-item:hover i { color:white; }
+.menu-item:hover { 
+    background-color: rgba(255, 255, 255, 0.15); 
+    transform:translateX(4px); 
+}
+.menu-item.active { 
+    background-color: rgba(255, 255, 255, 0.25); 
+    border-right: 4px solid #ffffff; 
+}
+
+/* ===== Quantity Buttons ===== */
+.quantity-btn { transition: all 0.2s ease; }
+.quantity-btn:hover { transform: scale(1.1); }
+
+/* ===== Hover Scale Utility ===== */
+.hover-scale { transition: transform 0.2s ease; }
+.hover-scale:hover { transform: scale(1.02); }
+
+/* ===== OTP & Password Strength ===== */
+.otp-input { width:50px; height:50px; text-align:center; font-size:18px; font-weight:bold; }
+.password-strength { height:4px; border-radius:2px; transition: all 0.3s ease; }
+.strength-weak { background: linear-gradient(135deg,#f093fb 0%,#f5576c 100%); }
+.strength-medium { background: linear-gradient(135deg,#fa709a 0%,#fee140 100%); }
+.strength-strong { background: linear-gradient(135deg,#43e97b 0%,#38f9d7 100%); }
+
+/* ===== Print Styles ===== */
+@media print {
+    body * { visibility:hidden; }
+    #printContent, #printContent * { visibility: visible; }
+    #printContent { position:absolute; left:0; top:0; width:100% !important; padding:0 !important; margin:0 !important; box-shadow:none !important; }
+    .print-table { width:100%; border-collapse:collapse; font-size:12px; }
+    .print-table th, .print-table td { border:1px solid #000; padding:8px; text-align:left; }
+    .print-table th { background-color:#f3f4f6 !important; font-weight:bold; }
+    .print-header { text-align:center; margin-bottom:20px; }
+    .print-stats { display:flex; justify-content:space-around; margin:20px 0; border:1px solid #000; padding:10px; }
+}
+
+/* ===== Status Indicators ===== */
+.status-pending { background:#fef3c7; color:#92400e; }
+.status-completed { background:#d1fae5; color:#065f46; }
+.status-failed { background:#fee2e2; color:#991b1b; }
+.status-refunded { background:#dbeafe; color:#1e40af; }
+.status-approved { background:#d1fae5; color:#065f46; }
+.status-rejected { background:#fee2e2; color:#991b1b; }
+.status-processing { background:#dbeafe; color:#1e40af; }
+.status-cancelled { background-color:#fee2e2; color:#991b1b; }
+
+/* ===== Priority ===== */
+.priority-high { border-left:4px solid #ef4444; }
+.priority-medium { border-left:4px solid #f59e0b; }
+.priority-low { border-left:4px solid #10b981; }
+
+/* ===== Misc Utilities ===== */
+.logo-text {
+    background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+.message-bubble { max-width:70%; word-wrap:break-word; }
+.truncate-text { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+/* ===== Dropdown ===== */
+.dropdown { opacity:0; visibility:hidden; transform:translateY(-10px); transition: all 0.3s ease; }
+.dropdown.show { opacity:1; visibility:visible; transform:translateY(0); }
+
+/* ===== Order Status Colors (Tailwind-inspired) ===== */
+.status-pending { background-color: #fef3c7; color: #92400e; }
+.status-processing { background-color: #dbeafe; color: #1e3a8a; }
+.status-shipped { background-color: #ede9fe; color: #5b21b6; }
+.status-delivered { background-color: #d1fae5; color: #065f46; }
+.status-cancelled { background-color: #fee2e2; color: #991b1b; }
+
+/* ===== Notification Badge Pulse ===== */
+.notification-badge { animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+/* ===== Integrations: fade-in (soft) + slide-down ===== */
+/* Giữ nguyên fadeIn cũ cho .fade-in-lg; dùng fadeInSoft cho .fade-in */
+@keyframes fadeInSoft {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeInSoft 0.3s ease-in; }
+
+/* Slide-down mới cho dropdown/header v.v. */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.slide-down { animation: slideDown 0.3s ease-out; }
