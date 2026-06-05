@@ -1,4 +1,4 @@
-# PTTKPM25-26_ClassN05_Nhom1Nhom18
+# PTTKPM25-26_ClassN05_Nhom18
 # HỆ THỐNG QUẢN LÝ CỬA HÀNG THIẾT BỊ ĐIỆN TỬ TRỰC TUYẾN
 Dự án mô phỏng một nền tảng thương mại điện tử chuyên về **thiết bị điện tử**, cho phép người dùng:
 - Duyệt sản phẩm, lọc theo danh mục/giá/thương hiệu  
