@@ -1,4 +1,4 @@
-# PTTKPM25-26_ClassN05_Nhom16
+# PTTKPM25-26_ClassN05_Nhom1Nhom18
 # HỆ THỐNG QUẢN LÝ CỬA HÀNG THIẾT BỊ ĐIỆN TỬ TRỰC TUYẾN
 Dự án mô phỏng một nền tảng thương mại điện tử chuyên về **thiết bị điện tử**, cho phép người dùng:
 - Duyệt sản phẩm, lọc theo danh mục/giá/thương hiệu  
@@ -27,11 +27,9 @@ Dự án mô phỏng một nền tảng thương mại điện tử chuyên về
 
 | STT | Họ và tên | Mã SV |
 |-----|------------|--------|
-| 1 | Nguyễn Văn Thăng | 23010572 |
-| 2 | Phạm Văn Sự | 23010523 |
-| 3 | Đặng Anh Tuyền | 23010912 |
-| 4 | Trần Đình Dũng | 23010596 |
-| 5 | Nguyễn Huy Toàn | 23017052 |
+| 1 | Đặng Việt Anh | 23010689 |
+| 2 | Đỗ Bảo Long | 23010561 |
+| 3 | Nguyễn Đức Quang  | 21012890 |
 
 ---
 
@@ -100,15 +98,3 @@ Nhóm dự kiến mở rộng hệ thống theo 5 hướng chính:
 5. **Mở rộng sản phẩm:** hỗ trợ đa chi nhánh, phát triển app mobile (Flutter/React Native), tích hợp chatbot và hệ gợi ý thông minh.
 
 > Mục tiêu: xây dựng hệ thống thương mại điện tử **an toàn – hiệu quả – dễ mở rộng**, sẵn sàng vận hành thực tế.
-
----
-
-## 📚 Tài liệu liên quan
-- [📄 Báo cáo chi tiết dự án](https://github.com/dunggdinh/PTTKPM25-26_ClassN05_Nhom16/blob/main/Documents/B%C3%A1o_c%C3%A1o_PTTKPM25-26_ClassN05_Nhom16.docx)
-- [💻 Mã nguồn trên GitHub](https://github.com/dunggdinh/PTTKPM25-26_ClassN05_Nhom16)
-- [📊 Slide thuyết trình](https://github.com/dunggdinh/PTTKPM25-26_ClassN05_Nhom16/blob/main/Documents/Slide_PTTKPM25-26_ClassN05_Nhom16.pptx)
-- [📗 Bảng theo dõi công việc](https://github.com/dunggdinh/PTTKPM25-26_ClassN05_Nhom16/blob/main/Documents/Ti%E1%BA%BFn_%C4%91%E1%BB%99_c%C3%B4ng_vi%E1%BB%87c_PTTKPM25-26_ClassN05_Nhom16.xlsx)
-
----
-
-**© 2025 - Nhóm 16 | Đại học Phenikaa – Khoa Công nghệ Thông tin**

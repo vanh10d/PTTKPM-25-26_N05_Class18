@@ -5,6 +5,11 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Auth;
 
+// Redirect root to customer product page
+Route::get('/', function () {
+    return redirect()->route('customer.product');
+});
+
 // Auth + Admin Controllers
 use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\admin\UserController;
